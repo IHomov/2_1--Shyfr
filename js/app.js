@@ -10,7 +10,7 @@ const IKAO = {
     codedTxt: [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
                 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-                'u', 'v', 'w', 'x', 'y', 'z',],
+                'u', 'v', 'w', 'x', 'y', 'z'],
     
     decryption: [' Zero', ' One', ' Two', ' Three', ' Four', ' Five',
                 ' Six', ' Seven', ' Eight', ' Nine',
@@ -22,7 +22,7 @@ const IKAO = {
 }
 
 function Decoded(Obj) {
-    inputTxt = inputTxt.value.toLowercase();
+    inputTxt = input.value.toLowerCase();
     let decodedTxt = [];    
     for (let i = 0; i < inputTxt.length; i++){
         for (let j = 0; j < Obj.decryption.length; j++){
@@ -32,5 +32,6 @@ function Decoded(Obj) {
         }
     }
     outputTxt.innerHTML = decodedTxt;
+    console.log(decodedTxt);
     
 }
